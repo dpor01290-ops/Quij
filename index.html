@@ -1,242 +1,222 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>نبحث عن زوج صالح لابنتكم</title>
-  <meta name="description" content="نبحث لابنتكم عن زوج صالح تقيّ، مع اشتراط مهر كريم لا يقل عن عشرة آلاف دولار يُقدّم لأهل العروس. تواصلوا معنا عبر تيليجرام.">
-  <meta name="theme-color" content="#0c0b09">
-  <style>
-    :root{
-      --bg:#0c0b09;           /* тёмный духовный фон */
-      --ink:#f4f1e9;          /* тёплый светлый текст */
-      --muted:#c8c2b2;        /* приглушённые подписи */
-      --gold:#d7b97b;         /* золото для акцентов */
-      --gold-strong:#e7c679;  /* ярче золото для свечения */
-      --line:#3a2f1a;         /* разделители */
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:
-        radial-gradient(1200px 600px at 80% -10%, #1a140a 0%, transparent 60%),
-        radial-gradient(900px 600px at 20% 110%, #171107 0%, transparent 60%),
-        linear-gradient(180deg, #0b0a08 0%, #0c0b09 100%);
-      color:var(--ink);
-      font-family: "Segoe UI", system-ui, -apple-system, "Noto Naskh Arabic", "Noto Kufi Arabic", Arial, sans-serif;
-      line-height:1.75;
-      letter-spacing:.1px;
-    }
-    .wrap{
-      max-width: 900px;
-      margin: 0 auto;
-      padding: clamp(20px, 4vw, 48px);
-    }
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
-      border: 1px solid rgba(215,185,123,0.18);
-      border-radius: 20px;
-      padding: clamp(20px, 4vw, 44px);
-      position: relative;
-      overflow: hidden;
-    }
-    /* мягкий орнамент без картинок */
-    .card::before{
-      content:"";
-      position:absolute; inset:-40% -20% auto -20%;
-      height:90%;
-      background:
-        radial-gradient(closest-side, rgba(215,185,123,0.09), transparent 70%) 0 0/220px 220px,
-        radial-gradient(closest-side, rgba(215,185,123,0.06), transparent 70%) 110px 110px/220px 220px;
-      filter: blur(2px);
-      opacity:.6;
-      pointer-events:none;
-    }
-    header{
-      text-align:center;
-      margin-bottom: 22px;
-    }
-    .bismillah{
-      display:inline-block;
-      padding: .35rem .9rem;
-      border: 1px solid rgba(215,185,123,.35);
-      border-radius: 999px;
-      color: var(--gold);
-      font-weight:600;
-      letter-spacing:.5px;
-      background: linear-gradient(90deg, rgba(215,185,123,.12), rgba(215,185,123,.03));
-      box-shadow: inset 0 0 20px rgba(215,185,123,.08);
-    }
-    h1{
-      margin: .9rem 0 0;
-      font-size: clamp(26px, 4.6vw, 40px);
-      line-height:1.3;
-      color: var(--ink);
-      font-weight:800;
-      text-shadow: 0 1px 0 rgba(0,0,0,.4);
-    }
-    .lead{
-      margin: 14px auto 20px;
-      color: var(--muted);
-      font-size: clamp(16px, 2.4vw, 18px);
-    }
-    .divider{
-      margin: 22px 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--line), transparent);
-    }
-    h2{
-      margin: 14px 0 10px;
-      color: var(--gold);
-      font-size: clamp(20px, 3.4vw, 26px);
-      font-weight: 700;
-      letter-spacing:.2px;
-    }
-    p{margin: 10px 0;}
-    ul{
-      margin: 8px 0 0;
-      padding: 0 1.2rem 0 0;
-      list-style: none;
-    }
-    ul li{
-      margin: 10px 0;
-      padding: 10px 12px;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(215,185,123,0.12);
-      border-radius: 12px;
-      position: relative;
-    }
-    ul li::before{
-      content:"✧";
-      color: var(--gold);
-      margin-left: .6rem;
-      font-size: 14px;
-      vertical-align: middle;
-    }
-    .badge{
-      display:inline-block;
-      font-size: 14px;
-      color: var(--gold);
-      border:1px dashed rgba(215,185,123,.45);
-      border-radius: 999px;
-      padding:.25rem .7rem;
-      margin-top:6px;
-      background: rgba(215,185,123,.06);
-    }
-    .cta{
-      margin-top: 26px;
-      display:flex; flex-direction:column; gap:14px;
-      align-items:center; justify-content:center;
-      text-align:center;
-    }
-    .note{
-      color: var(--muted);
-      font-size: 15px;
-    }
-    .btn-telegram{
-      --shine: rgba(231,198,121,.55);
-      display:inline-flex; align-items:center; gap:.65rem;
-      padding: .95rem 1.2rem;
-      border-radius: 14px;
-      color:#1a1206;
-      background:
-        radial-gradient(80% 140% at 50% 0%, var(--gold-strong), var(--gold) 70%, #bda364 100%);
-      border: 1px solid rgba(231,198,121,.65);
-      text-decoration:none;
-      font-weight:800;
-      letter-spacing:.3px;
-      box-shadow:
-        0 12px 36px rgba(231,198,121,.15),
-        inset 0 2px 8px rgba(255,255,255,.35),
-        inset 0 -8px 18px rgba(123,93,20,.35);
-      position:relative;
-      transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
-    }
-    .btn-telegram::after{
-      /* мягкое «золотое» свечение вокруг кнопки */
-      content:"";
-      position:absolute; inset:-6px;
-      border-radius:16px;
-      box-shadow: 0 0 40px 8px var(--shine);
-      opacity:.65; filter: blur(2px);
-      z-index:-1;
-      transition:opacity .2s ease;
-    }
-    .btn-telegram:hover{
-      transform: translateY(-2px);
-      box-shadow:
-        0 18px 48px rgba(231,198,121,.22),
-        inset 0 2px 10px rgba(255,255,255,.45),
-        inset 0 -10px 22px rgba(123,93,20,.42);
-    }
-    .btn-telegram:active{ transform: translateY(0) scale(.99); }
-    .btn-telegram svg{ width:22px; height:22px; }
-    footer{ text-align:center; margin-top: 26px; color: #9b927e; font-size: 13px;}
-    /* адаптив отступов */
-    @media (min-width:980px){
-      .wrap{padding:54px}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب زواج لبناء أسرة صالحة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Amiri', serif;
+            background-color: #fbfbf8; /* Мягкий кремовый фон */
+            color: #333;
+            line-height: 1.9;
+            margin: 0;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 50px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid #006442; /* Глубокий традиционный зеленый */
+        }
+
+        /* Typography */
+        .bismillah {
+            text-align: center;
+            font-size: 26px;
+            font-weight: 700;
+            color: #006442;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #006442;
+            margin-top: 30px;
+            border-bottom: 2px solid #d4af37; /* Золотое подчеркивание */
+            padding-bottom: 10px;
+            font-size: 22px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Highlighted Section (Dowry Condition) */
+        .highlight {
+            background-color: #f9f5e9;
+            padding: 20px;
+            border-right: 4px solid #d4af37; /* Золотая граница */
+            margin: 30px 0;
+            font-weight: bold;
+        }
+
+        /* Benefits List Styling */
+        .benefits-list {
+            list-style: none;
+            padding-right: 0;
+            margin: 20px 0;
+        }
+
+        .benefits-list li {
+            padding: 15px 0;
+            border-bottom: 1px dashed #e0e0e0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .benefits-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Нумерация списка */
+        .list-number {
+            display: inline-block;
+            background-color: #006442;
+            color: #fff;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin-left: 15px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        /* Call to Action Section */
+        .cta-section {
+            margin-top: 50px;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        /* ЗОЛОТАЯ КНОПКА TELEGRAM */
+        .golden-button {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 700;
+            padding: 15px 40px;
+            border-radius: 50px;
+            color: #4c3200; /* Темный текст для контраста на золоте */
+            
+            /* Эффект золотого градиента */
+            background: linear-gradient(145deg, #D4AF37, #F1E39D, #E6C565, #D4AF37);
+            background-size: 200% 200%;
+            border: 2px solid #B8860B; /* Темно-золотая граница */
+            
+            /* Металлическая тень и блеск */
+            box-shadow: 0 5px 15px rgba(184, 134, 11, 0.4), 
+                        inset 0 2px 1px rgba(255, 255, 255, 0.6), /* Верхний блик */
+                        inset 0 -2px 1px rgba(0, 0, 0, 0.2); /* Нижняя тень */
+            
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.5s ease;
+        }
+
+        .golden-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(184, 134, 11, 0.6), 
+                        inset 0 2px 1px rgba(255, 255, 255, 0.8), 
+                        inset 0 -2px 1px rgba(0, 0, 0, 0.3);
+            background-position: 50% 50%;
+        }
+
+        .telegram-icon {
+            margin-left: 15px;
+            width: 30px;
+            height: 30px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 30px;
+                margin: 10px auto;
+            }
+            .golden-button {
+                padding: 12px 30px;
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main class="wrap">
-    <section class="card">
-      <header>
-        <span class="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيم</span>
-        <h1>نبحث لابنتكم عن زوجٍ صالحٍ كريمٍ يقوم عليها بالمعروف</h1>
-        <p class="lead">
-          نؤمن أنّ أحسن وقتٍ للزواج هو في ريعان الشباب؛ قلبٌ نقيّ وبدايةٌ مباركة مع الزوج من أوّل الطريق، فتُبنى المحبّة والرحمة على السكينة.
-        </p>
-      </header>
 
-      <div class="divider"></div>
-
-      <section>
-        <h2>منهجُنا واختياراتُنا</h2>
-        <p>
-          نحنا ما نأخذ الموضوع عبث؛ ندقّق ونتأكّد من الرجال اللي نتواصل معهم. نختار من ثبتت أقدامُهم، عندهم استقرارٌ وقدرةٌ على تحمّل مسؤولية بيت. نبحث عمّن يحمي ويَصون ويكون سندًا وزوجًا أمينًا، ويبني بيتاً على تقوى الله والاحترام.
-        </p>
-        <p class="badge">شرطٌ أساسي: مهرٌ كريم لا يقلّ عن <strong>10,000$</strong> يُقدَّم لأهل البنت — علامةُ جِدّ واحترام واستعداد للمسؤولية.</p>
-      </section>
-
-      <section>
-        <h2>الخيراتُ والفضائل</h2>
-        <ul>
-          <li><strong>حفظ الشرف والعِفّة</strong> — تكون البنت من أوّل حياتها في بيت زوجها، بعيدة عن الفتن والشكوك.</li>
-          <li><strong>المودّة من البداية</strong> — الزوج أوّل من يشاركها مشاعرها وتجاربها، وتكبر القلوب على الصفاء.</li>
-          <li><strong>استقرارٌ نفسيّ وعاطفيّ</strong> — تشعر بالأمان والدعم تحت رعاية زوجٍ أمين.</li>
-          <li><strong>تقوية الروابط الأسريّة والاجتماعيّة</strong> — سنّةُ الخير في بيوت المسلمين: سترٌ وكرامةٌ وقوّةٌ للعائلة.</li>
-          <li><strong>تجنّبُ التأخير والخلافات</strong> — طولُ الانتظار يكثر معه الجدل؛ الشبابُ وقتُ اختيارٍ صادق.</li>
-          <li><strong>بركةٌ في البيت والذرية</strong> — البداياتُ المتواضعة خطوةً خطوةً تجلب البركة بإذن الله.</li>
-          <li><strong>طمأنينةٌ للوالدين</strong> — يعرف الأبوان أنّ بنتهم في بيتٍ كريم مع رجلٍ أثبت جِدّيتَه ومسؤوليته.</li>
-        </ul>
-      </section>
-
-      <div class="divider"></div>
-
-      <section>
-        <h2>للتواصل وبداية الحوار</h2>
-        <p class="note">
-          نفهم أنّه قد لا يكون لديكم تيليجرام، لكن للأسف حاليًا هذه هي الوسيلةُ الوحيدة. إن كانت رغبتُكم قويةً، فضلاً نزّلوا التطبيق وتواصلوا معنا.
-        </p>
-        <p>
-          ولأجل حوارٍ مُثمر، رجاءً اذكروا لنا عن بنتكم: كيف تشوفوها وما صفاتها؛ هذا يساعدنا نكوّن صورةً أوضح عن توقعاتكم.
-        </p>
-        <div class="cta">
-          <a class="btn-telegram" href="https://t.me/jkldldo" target="_blank" rel="noopener">
-            <!-- иконка Telegram (SVG) -->
-            <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="120" cy="120" r="120" fill="rgba(0,0,0,.12)"/>
-              <path d="M179 70L43 116c-9 3-9 13-1 16l35 11 12 39c2 5 9 6 12 2l18-18 35 26c4 3 10 1 12-4l22-106c2-8-4-12-9-10zM94 159l-7-25 66-52-52 62-7 15z" fill="#0c0b09"/>
-            </svg>
-            تواصل عبر تيليجرام — @jkldldo
-          </a>
+    <div class="container">
+        
+        <div class="bismillah">
+            بسم الله الرحمن الرحيم
         </div>
-      </section>
 
-      <footer>© بإذن الله يكون هذا سببًا لبيتٍ مباركٍ قائمٍ على المودّة والرحمة.</footer>
-    </section>
-  </main>
-</body>
-</html>
+        <section>
+            <p>نخاطبكم باحترام وصدق. نحنا نبحث لابنتش عن زوج صالح، يخاف الله، يحفظها ويسترها ويقوم بالنفقة عليها. ونؤمن إن أحسن وقت للزواج هو وهي بَعْدها في شبابها، قلبها نظيف وعمرها كله قدامها، عشان تبدأ حياتها مع زوجها من أوّل المشوار، ويكبروا مع بعض على المحبّة والرحمة.</p>
+            <p>نحنا ما نأخذ الموضوع عبث، بالعكس ندقق ونسأل ونتأكد من الرجال اللي نتواصل معهم. ندور ناس واقفين على رجلهم، عندهم استقرار وقدرة يتحملوا مسؤولية بيت. ندور رجال يقدروا يحموا ويصونوا زوجتهم، ويكونوا لها سند وظهر، ويبنوا بيت على تقوى الله والاحترام.</p>
+        </section>
+
+        <section class="highlight">
+            <p>ومن الشروط الأساسية إن الزوج يقدم مهر طيب، لا يقل عن عشرة ألف دولار (10,000 دولار)، يدفعه لأهل البنت. وهذا دليل على جديته واحترامه لأهلها، وبرهان إنه مستعد يتحمل المسؤولية.</p>
+        </section>
+
+        <section>
+            <h2>لماذا نعتقد أن الزواج المبكر فيه خير كثير:</h2>
+            <ol class="benefits-list">
+                <li>
+                    <span class="list-number">1</span>
+                    حفظ الشرف والعفة — البنت من أول حياتها تكون في بيت زوجها، بعيدة عن الفتن والشكوك.
+                </li>
+                <li>
+                    <span class="list-number">2</span>
+                    المودّة من البداية — زوجها يكون أول واحد يشاركها مشاعرها وتجاربها، ويعيشوا مع بعض على الصفاء.
+                </li>
+                <li>
+                    <span class="list-number">3</span>
+                    الاستقرار النفسي والعاطفي — من بدري تحس بالأمان والدعم مع زوجها.
+                </li>
+                <li>
+                    <span class="list-number">4</span>
+                    تقوية الروابط الأسرية والاجتماعية — عُرف المسلمين من قديم إن الزواج المبكر فيه ستر وخير وكرامة.
+                </li>
+                <li>
+                    <span class="list-number">5</span>
+                    تفادي كثرة الخلافات والتأخير — كل ما طول الانتظار كثرت المشاكل والآراء. الزواج في الشباب أصفى وأصدق.
+                </li>
+                <li>
+                    <span class="list-number">6</span>
+                    البركة في البيت والذرية — لما يبدأوا حياتهم من بدري، يبنوا خطوة خطوة بتواضع، ويكون في حياتهم بركة من الله.
+                </li>
+                <li>
+                    <span class="list-number">7</span>
+                    راحة للأهل — الأب والأم يطمئن قلبهم إن بنتهم في بيت كريم، مع رجل أثبت جديته بالمهر والقدرة على المسؤولية.
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <p><strong>هدفنا واضح:</strong> نبني أسرة على كتاب الله وسنة رسوله ﷺ، أساسها المحبة والرحمة والسكينة، وتكون سبب للخير والبركة، وراحة للبنت وأهلها، وقوة للمجتمع المسلم.</p>
+        </section>
+
+        <section class="cta-section">
+            <h2>📩 للتواصل</h2>
+            <p>نفهم إنه يمكن ما عندكمش تليجرام، لكن للأسف الآن هذا هو الوسيلة الوحيدة. إذا رغبتكم قوية نزّلوا التطبيق وتواصلوا معنا.</p>
+            <p>ولأجل يكون الحوار مثمر، رجاءً اذكروا لنا عن بنتكم: كيف تشوفوها، وما هي صفاتها. هذا يساعدنا نكوّن صورة أوضح.</p>
+            
+            <a href="https://t.me/jkldldo" target="_blank" class="golden-button">
+                تواصلوا معنا عبر التليجرام
+                ```svg
+<svg class="telegram-icon" viewBox="0 0 24 24" fill="#4c3200" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)">
+                    <path d="M9.417 15.181-.397 12.063a.5.5 0 0 1 .122-.94L23.225.125a.5.5 0 0 1 .71.641L13.505 23.91a.5.5 0 0 1-.93.13L9.417 15.181zm.754-4.67L18.33 3.152 5.3 10.749l4.871-.238z"/>
+                </svg>
